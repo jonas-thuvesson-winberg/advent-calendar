@@ -1,0 +1,21 @@
+.container {
+  z-index: 400;
+  margin: 10px auto;
+  width: 90%;
+  display: block;
+  // background: blue;
+
+  .row {
+    // background: red;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .col {
+      display: block;
+      // background: red;
+    }
+  }
+}
