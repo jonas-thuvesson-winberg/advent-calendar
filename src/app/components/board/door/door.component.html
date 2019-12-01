@@ -1,0 +1,10 @@
+<div
+  (click)="onClick()"
+  class="door-container"
+  [ngClass]="open ? 'open' : 'closed'"
+>
+  <div class="number">{{ number }}</div>
+  <div class="cover left" #leftCover></div>
+  <div class="cover right" #rightCover></div>
+  <ac-door-content open="{{ open }}"></ac-door-content>
+</div>
