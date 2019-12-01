@@ -1,0 +1,13 @@
+.icon-container {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  padding: 5px 9px;
+  background-color: rgba(0, 0, 0, 0.37);
+  border-radius: 25px;
+
+  .icon {
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
