@@ -1,17 +1,24 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { DateData, boardData } from "./board-data";
 
 @Component({
   selector: "ac-board",
   templateUrl: "./board.component.html",
   styleUrls: ["./board.component.scss"]
 })
-export class BoardComponent {
-  title = "advent-calendar";
-  private numbers: number[];
+export class BoardComponent implements OnInit {
+  private videoSelected: boolean;
+  private selectedVideoId: string;
+  private dates: DateData[];
 
-  constructor() {
-    this.numbers = Array(24)
-      .fill(0)
-      .map((x, i) => i);
+  ngOnInit() {
+    this.videoSelected = false;
+    this.dates = boardData.dates;
+  }
+
+  private handleSelectedVideo(videoId: string) {
+    console.log(videoId);
+    this.videoSelected = true;
+    this.selectedVideoId = videoId;
   }
 }

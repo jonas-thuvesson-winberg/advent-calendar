@@ -1,8 +1,13 @@
 <div class="container">
   <ac-christmas-tree-border></ac-christmas-tree-border>
   <div class="row">
-    <div class="col" *ngFor="let i of numbers">
-      <ac-door number="{{ i + 1 }}" contentAudio="elephant"></ac-door>
+    <div class="col" *ngFor="let date of dates">
+      <ac-door [date]="date" (videoSelected)="handleSelectedVideo($event)">
+      </ac-door>
     </div>
   </div>
+  <ac-video-modal
+    *ngIf="videoSelected"
+    [videoId]="selectedVideoId"
+  ></ac-video-modal>
 </div>

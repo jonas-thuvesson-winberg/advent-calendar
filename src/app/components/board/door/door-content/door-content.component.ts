@@ -1,17 +1,54 @@
-import { Component, Input, OnInit } from "@angular/core";
+import {
+  Component,
+  Input,
+  OnInit,
+  AfterViewInit,
+  Renderer2,
+  ViewChild,
+  ElementRef,
+  Output,
+  EventEmitter
+} from "@angular/core";
 import { AudioService } from "src/app/services/audio-service";
+import { DateData } from "../../board-data";
 
 @Component({
   selector: "ac-door-content",
   templateUrl: "./door-content.component.html",
   styleUrls: ["./door-content.component.scss"]
 })
-export class DoorContentComponent implements OnInit {
-  @Input() open: boolean;
+export class DoorContentComponent implements OnInit, AfterViewInit {
+  @Input() date: DateData;
+  @Output() videoSelected: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {
+  @ViewChild("content", { static: false })
+  private content: ElementRef<HTMLDivElement>;
+
+  constructor(private audioService: AudioService, private renderer: Renderer2) {
     // this.open = false;
   }
 
   ngOnInit() {}
+
+  ngAfterViewInit() {
+    if (this.date.imageFileName) {
+      const img = new Image();
+      img.src = `assets/${this.date.imageFileName}`;
+      this.renderer.setStyle(
+        this.content.nativeElement,
+        "background-image",
+        `url(${img.src})`
+      );
+    }
+  }
+
+  private playVideo(): void {
+    this.videoSelected.emit(this.date.videoId);
+    // window.open(`http://youtube.com/watch?v=${this.date.videoId}`, "_blank");
+  }
+
+  private playSound(): void {
+    if (this.date.audioFileName)
+      this.audioService.playAudio(this.date.audioFileName);
+  }
 }

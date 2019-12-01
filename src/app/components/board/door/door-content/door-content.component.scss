@@ -1,9 +1,22 @@
 .content {
   position: relative;
-  background-image: url("../../../../../assets/elephant.jpg");
+  // background-image: url("../../../../../assets/elephant.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 100%;
   padding: 100px;
 
   transition: all 0s;
+
+  .icon.play-video-button {
+    position: absolute;
+    top: 82px;
+    left: 35px;
+  }
+
+  .icon.play-sound-button {
+    position: absolute;
+    top: 82px;
+    left: 115px;
+  }
 }

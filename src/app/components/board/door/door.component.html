@@ -1,10 +1,21 @@
 <div
   (click)="onClick()"
   class="door-container"
-  [ngClass]="open ? 'open' : 'closed'"
+  [ngClass]="date.isOpened ? 'open' : 'closed'"
 >
-  <div class="number">{{ number }}</div>
-  <div class="cover left" #leftCover></div>
-  <div class="cover right" #rightCover></div>
-  <ac-door-content open="{{ open }}"></ac-door-content>
+  <div class="number">{{ this.date.dayNumber }}</div>
+  <div
+    class="cover left closed"
+    [ngClass]="{ open: date.isOpened }"
+    #leftCover
+  ></div>
+  <div
+    class="cover right"
+    [ngClass]="{ open: date.isOpened }"
+    #rightCover
+  ></div>
+  <ac-door-content
+    [date]="date"
+    (videoSelected)="propagateVideoSelected($event)"
+  ></ac-door-content>
 </div>

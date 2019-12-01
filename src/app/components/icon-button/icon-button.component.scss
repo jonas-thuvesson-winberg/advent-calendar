@@ -1,10 +1,21 @@
 .icon-container {
-  position: absolute;
-  top: 80px;
-  left: 80px;
-  padding: 5px 9px;
+  padding: 12px 16px;
   background-color: rgba(0, 0, 0, 0.37);
-  border-radius: 25px;
+  border-radius: 30px;
+  width: 23px;
+  // height: 30px;
+
+  &:hover {
+    cursor: pointer;
+
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+    transition: box-shadow 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .icon {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
 
   .icon {
     margin-top: 3px;

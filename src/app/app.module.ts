@@ -10,6 +10,7 @@ import { ChristmasTreeBorderComponent } from "./components/board/christmas-tree-
 import { SnowComponent } from "./components/snow/snow.component";
 import { DoorContentComponent } from "./components/board/door/door-content/door-content.component";
 import { IconButtonComponent } from "./components/icon-button/icon-button.component";
+import { VideoModalComponent } from "./components/board/video-modal/video-modal.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { IconButtonComponent } from "./components/icon-button/icon-button.compon
     ChristmasTreeComponent,
     ChristmasTreeBorderComponent,
     SnowComponent,
-    IconButtonComponent
+    IconButtonComponent,
+    VideoModalComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

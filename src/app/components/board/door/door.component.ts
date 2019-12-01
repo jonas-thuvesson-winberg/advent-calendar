@@ -4,9 +4,12 @@ import {
   OnInit,
   ViewChild,
   ElementRef,
-  Renderer2
+  Renderer2,
+  Output,
+  EventEmitter
 } from "@angular/core";
 import { AudioService } from "src/app/services/audio-service";
+import { DateData } from "../board-data";
 
 @Component({
   selector: "ac-door",
@@ -14,8 +17,8 @@ import { AudioService } from "src/app/services/audio-service";
   styleUrls: ["./door.component.scss"]
 })
 export class DoorComponent implements OnInit {
-  @Input() number: number;
-  @Input() contentAudio?: string;
+  @Input() date: DateData;
+  @Output() videoSelected: EventEmitter<string> = new EventEmitter<string>();
 
   @ViewChild("leftCover", { static: false })
   private leftCover: ElementRef<HTMLDivElement>;
@@ -23,30 +26,34 @@ export class DoorComponent implements OnInit {
   @ViewChild("rightCover", { static: false })
   private rightCover: ElementRef<HTMLDivElement>;
 
-  private open: boolean;
-
   constructor(private audioService: AudioService, private renderer: Renderer2) {
     // this.open = false;
   }
 
   ngOnInit() {
-    this.open = false;
+    // console.log(this.open);
   }
 
   private onClick(): void {
-    if (!this.open) {
-      this.openCovers();
+    if (this.isValidDate() && !this.date.isOpened) {
       this.playAudio();
-      this.open = true;
+      this.date.isOpened = true;
       setTimeout(() => {
         this.playContentAudio();
       }, 1000);
-    } else {
-      this.playContentAudio();
     }
   }
 
-  private openCovers() {
+  private isValidDate(): boolean {
+    const hasValidValues =
+      !!this.date.audioFileName &&
+      !!this.date.imageFileName &&
+      !!this.date.videoId;
+    const today = new Date().getDay() + 1;
+    return today >= this.date.dayNumber && hasValidValues;
+  }
+
+  private openCovers(): void {
     this.renderer.addClass(this.leftCover.nativeElement, "open");
     this.renderer.addClass(this.rightCover.nativeElement, "open");
   }
@@ -56,6 +63,11 @@ export class DoorComponent implements OnInit {
   }
 
   private playContentAudio(): void {
-    if (this.contentAudio) this.audioService.playAudio(this.contentAudio);
+    if (this.date.audioFileName)
+      this.audioService.playAudio(this.date.audioFileName);
+  }
+
+  private propagateVideoSelected(videoId: string): void {
+    this.videoSelected.emit(videoId);
   }
 }
