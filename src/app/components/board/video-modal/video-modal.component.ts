@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 
 @Component({
@@ -8,6 +8,7 @@ import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 })
 export class VideoModalComponent {
   @Input() videoId: string;
+  @Output() closingModal: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -16,5 +17,9 @@ export class VideoModalComponent {
       `https://www.youtube.com/embed/${this.videoId}`
     );
     return url;
+  }
+
+  closeModal(): void {
+    this.closingModal.emit();
   }
 }

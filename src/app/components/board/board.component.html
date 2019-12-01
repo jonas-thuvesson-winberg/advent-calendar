@@ -9,5 +9,6 @@
   <ac-video-modal
     *ngIf="videoSelected"
     [videoId]="selectedVideoId"
+    (closingModal)="handleClosingModal()"
   ></ac-video-modal>
 </div>

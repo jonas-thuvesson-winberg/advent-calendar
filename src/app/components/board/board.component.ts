@@ -8,7 +8,7 @@ import { DateData, boardData } from "./board-data";
 })
 export class BoardComponent implements OnInit {
   private videoSelected: boolean;
-  private selectedVideoId: string;
+  private selectedVideoId?: string;
   private dates: DateData[];
 
   ngOnInit() {
@@ -20,5 +20,10 @@ export class BoardComponent implements OnInit {
     console.log(videoId);
     this.videoSelected = true;
     this.selectedVideoId = videoId;
+  }
+
+  private handleClosingModal() {
+    this.videoSelected = false;
+    this.selectedVideoId = null;
   }
 }
