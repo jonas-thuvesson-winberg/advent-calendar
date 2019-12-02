@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/advent-calendar/",
             "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -25,9 +26,7 @@
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              // "node_modules/material-icons/css/material-icons.min.css",
               "node_modules/material-icons/iconfont/material-icons.css",
-
               "src/styles.scss"
             ],
             "scripts": []
@@ -114,6 +113,12 @@
             "production": {
               "devServerTarget": "advent-calendar:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/advent-calendar/"
           }
         }
       }
