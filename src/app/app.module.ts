@@ -11,6 +11,7 @@ import { SnowComponent } from "./components/snow/snow.component";
 import { DoorContentComponent } from "./components/board/door/door-content/door-content.component";
 import { IconButtonComponent } from "./components/icon-button/icon-button.component";
 import { VideoModalComponent } from "./components/board/video-modal/video-modal.component";
+import { CalendarDateComponent } from "./components/board/door/calendar-date/calendar-date.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { VideoModalComponent } from "./components/board/video-modal/video-modal.
     ChristmasTreeBorderComponent,
     SnowComponent,
     IconButtonComponent,
-    VideoModalComponent
+    VideoModalComponent,
+    CalendarDateComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

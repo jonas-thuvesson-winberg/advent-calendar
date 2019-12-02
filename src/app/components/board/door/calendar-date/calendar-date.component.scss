@@ -1,0 +1,21 @@
+.container {
+  z-index: 10000;
+  position: relative;
+
+  .number {
+    font-family: monospace;
+    font-size: 30px;
+    line-height: 30px;
+    width: 30px;
+    color: white;
+  }
+
+  .star {
+    color: yellow;
+    font-size: 150px;
+
+    position: absolute;
+    top: -63px;
+    left: -58px;
+  }
+}
