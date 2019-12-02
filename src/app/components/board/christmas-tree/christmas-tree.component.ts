@@ -6,5 +6,5 @@ import { Component } from "@angular/core";
   styleUrls: ["./christmas-tree.component.scss"]
 })
 export class ChristmasTreeComponent {
-  private icon = "🎄";
+  icon = "🎄";
 }

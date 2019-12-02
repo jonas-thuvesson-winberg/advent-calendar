@@ -42,12 +42,12 @@ export class DoorContentComponent implements OnInit, AfterViewInit {
     }
   }
 
-  private playVideo(): void {
+  playVideo(): void {
     this.videoSelected.emit(this.date.videoId);
     // window.open(`http://youtube.com/watch?v=${this.date.videoId}`, "_blank");
   }
 
-  private playSound(): void {
+  playSound(): void {
     if (this.date.audioFileName)
       this.audioService.playAudio(this.date.audioFileName);
   }

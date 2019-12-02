@@ -34,7 +34,7 @@ export class DoorComponent implements OnInit {
     // console.log(this.open);
   }
 
-  private onClick(): void {
+  onClick(): void {
     if (this.isValidDate() && !this.date.isOpened) {
       this.playAudio();
       this.date.isOpened = true;
@@ -53,11 +53,6 @@ export class DoorComponent implements OnInit {
     return today >= this.date.dayNumber && hasValidValues;
   }
 
-  private openCovers(): void {
-    this.renderer.addClass(this.leftCover.nativeElement, "open");
-    this.renderer.addClass(this.rightCover.nativeElement, "open");
-  }
-
   private playAudio(): void {
     this.audioService.playAudio("sparkle");
   }
@@ -67,7 +62,12 @@ export class DoorComponent implements OnInit {
       this.audioService.playAudio(this.date.audioFileName);
   }
 
-  private propagateVideoSelected(videoId: string): void {
+  propagateVideoSelected(videoId: string): void {
     this.videoSelected.emit(videoId);
+  }
+
+  openCovers(): void {
+    this.renderer.addClass(this.leftCover.nativeElement, "open");
+    this.renderer.addClass(this.rightCover.nativeElement, "open");
   }
 }
