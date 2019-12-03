@@ -21,23 +21,23 @@ export const boardData: BoardData = {
     },
     {
       dayNumber: 2,
-      audioFileName: "tiger",
-      imageFileName: "tiger.jpg",
-      videoId: "1vUuHqqTQTw",
-      isOpened: false
-    },
-    {
-      dayNumber: 3,
       audioFileName: "",
       imageFileName: "tractor.jpg",
       videoId: "y5n3FeVKh2c",
       isOpened: false
     },
     {
+      dayNumber: 3,
+      audioFileName: "tiger",
+      imageFileName: "tiger.jpg",
+      videoId: "1vUuHqqTQTw",
+      isOpened: false
+    },
+    {
       dayNumber: 4,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      imageFileName: "ant.jpg",
+      videoId: "zMj1Zqf04Mg",
       isOpened: false
     },
     {
