@@ -27,5 +27,3 @@ link: [https://www.nepalitimes.com/banner/how-many-tigers-in-nepal/](https://www
 
 credit: Tractor Of The Year<br>
 link: [https://tractoroftheyear.org/winners/](https://tractoroftheyear.org/winners/)
-
-## **tractor**
