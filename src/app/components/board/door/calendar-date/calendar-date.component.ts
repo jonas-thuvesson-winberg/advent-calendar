@@ -7,4 +7,5 @@ import { Component, Input } from "@angular/core";
 })
 export class CalendarDateComponent {
   @Input() starred: boolean;
+  @Input() dayNumber: number;
 }

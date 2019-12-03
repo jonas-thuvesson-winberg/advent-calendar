@@ -3,7 +3,11 @@
   class="door-container"
   [ngClass]="date.isOpened ? 'open' : 'closed'"
 >
-  <div class="number">{{ this.date.dayNumber }}</div>
+  <ac-calendar-date
+    class="number"
+    [starred]="dateHasPassed()"
+    [dayNumber]="date.dayNumber"
+  ></ac-calendar-date>
   <div
     class="cover left closed"
     [ngClass]="{ open: date.isOpened }"

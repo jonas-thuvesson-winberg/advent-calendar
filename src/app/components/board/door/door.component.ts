@@ -35,7 +35,7 @@ export class DoorComponent implements OnInit {
   }
 
   onClick(): void {
-    if (this.isValidDate() && !this.date.isOpened) {
+    if (this.isDateAbleToOpen() && !this.date.isOpened) {
       this.playAudio();
       this.date.isOpened = true;
       setTimeout(() => {
@@ -44,7 +44,7 @@ export class DoorComponent implements OnInit {
     }
   }
 
-  private isValidDate(): boolean {
+  private isDateAbleToOpen(): boolean {
     const hasValidValues =
       !!this.date.audioFileName &&
       !!this.date.imageFileName &&
@@ -69,5 +69,9 @@ export class DoorComponent implements OnInit {
   openCovers(): void {
     this.renderer.addClass(this.leftCover.nativeElement, "open");
     this.renderer.addClass(this.rightCover.nativeElement, "open");
+  }
+
+  dateHasPassed(): boolean {
+    return this.isDateAbleToOpen();
   }
 }

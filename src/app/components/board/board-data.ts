@@ -21,9 +21,9 @@ export const boardData: BoardData = {
     },
     {
       dayNumber: 2,
-      audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      audioFileName: "tiger",
+      imageFileName: "tiger.jpg",
+      videoId: "1vUuHqqTQTw",
       isOpened: false
     },
     {
