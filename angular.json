@@ -27,6 +27,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "node_modules/material-icons/iconfont/material-icons.css",
+              "node_modules/reset-css/reset.css",
               "src/styles.scss"
             ],
             "scripts": []

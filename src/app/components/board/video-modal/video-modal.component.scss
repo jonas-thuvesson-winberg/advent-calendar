@@ -16,12 +16,14 @@
     flex-direction: row;
 
     .iframe {
-      max-width: 50%;
+      width: 70%;
+      max-width: 90%;
+      height: 70vh;
     }
 
     .close-button {
       position: relative;
-      top: -130px;
+      top: -30%;
       left: 10px;
     }
   }

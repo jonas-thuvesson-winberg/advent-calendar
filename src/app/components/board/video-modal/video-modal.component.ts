@@ -14,7 +14,7 @@ export class VideoModalComponent {
 
   getVideoUrl(): SafeResourceUrl {
     const url = this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://www.youtube.com/embed/${this.videoId}`
+      `https://www.youtube.com/embed/${this.videoId}?&autoplay=1`
     );
     return url;
   }

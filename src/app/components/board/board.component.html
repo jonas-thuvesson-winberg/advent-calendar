@@ -1,5 +1,8 @@
 <div class="container">
-  <ac-christmas-tree-border></ac-christmas-tree-border>
+  <!-- <ac-christmas-tree-border></ac-christmas-tree-border> -->
+  <div class="header">
+    <h1 class="page-heading">God Jul!</h1>
+  </div>
   <div class="row">
     <div class="col" *ngFor="let date of dates">
       <ac-door [date]="date" (videoSelected)="handleSelectedVideo($event)">

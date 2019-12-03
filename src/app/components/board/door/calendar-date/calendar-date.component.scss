@@ -3,7 +3,6 @@
   position: relative;
 
   .number {
-    font-family: monospace;
     font-size: 30px;
     line-height: 30px;
     width: 30px;
@@ -12,11 +11,11 @@
   }
 
   .star {
-    color: yellow;
-    font-size: 150px;
+    color: rgb(251, 255, 0);
+    font-size: 160px;
 
     position: absolute;
-    top: -63px;
-    left: -58px;
+    top: -70px;
+    left: -63px;
   }
 }

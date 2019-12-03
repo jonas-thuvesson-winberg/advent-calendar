@@ -1,4 +1,5 @@
 .content {
+  overflow: hidden;
   position: relative;
   // background-image: url("../../../../../assets/elephant.jpg");
   background-position: center;
@@ -10,13 +11,13 @@
 
   .icon.play-video-button {
     position: absolute;
-    top: 82px;
-    left: 35px;
+    top: 130px;
+    left: -14px;
   }
 
   .icon.play-sound-button {
     position: absolute;
-    top: 82px;
-    left: 115px;
+    top: 130px;
+    left: 140px;
   }
 }
