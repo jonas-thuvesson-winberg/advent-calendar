@@ -1,14 +1,16 @@
 <div class="content" #content>
-  <div class="icon play-video-button">
-    <ac-icon-button
-      (click)="playVideo()"
-      iconName="personal_video"
-    ></ac-icon-button>
-  </div>
-  <div class="icon play-sound-button">
-    <ac-icon-button
-      (click)="playSound()"
-      iconName="music_note"
-    ></ac-icon-button>
+  <div class="icon-group">
+    <div class="icon play-video-button" *ngIf="!!date.videoId">
+      <ac-icon-button
+        (click)="playVideo()"
+        iconName="personal_video"
+      ></ac-icon-button>
+    </div>
+    <div class="icon play-sound-button" *ngIf="!!date.audioFileName">
+      <ac-icon-button
+        (click)="playSound()"
+        iconName="music_note"
+      ></ac-icon-button>
+    </div>
   </div>
 </div>

@@ -38,17 +38,13 @@ export class DoorComponent implements OnInit {
     if (this.isDateAbleToOpen() && !this.date.isOpened) {
       this.playAudio();
       this.date.isOpened = true;
-      setTimeout(() => {
-        this.playContentAudio();
-      }, 1000);
     }
   }
 
   private isDateAbleToOpen(): boolean {
     const hasValidValues =
-      !!this.date.audioFileName &&
       !!this.date.imageFileName &&
-      !!this.date.videoId;
+      (!!this.date.audioFileName || !!this.date.videoId);
     const today = new Date().getDay() + 1;
     return today >= this.date.dayNumber && hasValidValues;
   }
@@ -57,10 +53,10 @@ export class DoorComponent implements OnInit {
     this.audioService.playAudio("sparkle");
   }
 
-  private playContentAudio(): void {
-    if (this.date.audioFileName)
-      this.audioService.playAudio(this.date.audioFileName);
-  }
+  // private playContentAudio(): void {
+  //   if (this.date.audioFileName)
+  //     this.audioService.playAudio(this.date.audioFileName);
+  // }
 
   propagateVideoSelected(videoId: string): void {
     this.videoSelected.emit(videoId);

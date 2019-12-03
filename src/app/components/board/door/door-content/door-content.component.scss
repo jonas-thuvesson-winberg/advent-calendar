@@ -5,19 +5,25 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 200%;
-  padding: 100px;
+  padding: 150px;
 
   transition: all 0s;
+  .icon-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
-  .icon.play-video-button {
     position: absolute;
     top: 130px;
-    left: -14px;
-  }
+    left: -100px;
+    width: 500px;
 
-  .icon.play-sound-button {
-    position: absolute;
-    top: 130px;
-    left: 140px;
+    .icon.play-video-button {
+      display: block;
+    }
+
+    .icon.play-sound-button {
+      display: block;
+    }
   }
 }

@@ -10,8 +10,8 @@
     .number {
       z-index: 200;
       position: absolute;
-      top: 90px;
-      left: 83px;
+      top: 140px;
+      left: 133px;
 
       transition: color 0.2s ease-in-out;
     }
@@ -51,8 +51,8 @@
     background: rgba(2, 87, 8, 1);
     display: inline-block;
     margin: 0;
-    padding: 100px 0;
-    padding-right: 98px;
+    padding: 150px 0;
+    padding-right: 148px;
 
     &.open {
       width: 0;
