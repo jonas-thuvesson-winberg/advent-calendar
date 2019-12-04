@@ -4,6 +4,11 @@ export interface DateData {
   imageFileName: string;
   videoId: string;
   isOpened: boolean;
+  imageAdjustment?: {
+    x: number;
+    y: number;
+  };
+  videoOffset?: number;
 }
 
 export interface BoardData {
@@ -38,21 +43,27 @@ export const boardData: BoardData = {
       audioFileName: "",
       imageFileName: "ant.jpg",
       videoId: "zMj1Zqf04Mg",
-      isOpened: false
+      isOpened: false,
+      videoOffset: 7
     },
     {
       dayNumber: 5,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      imageFileName: "draken_bolibompa.jpg",
+      videoId: "M5x95d6eMC8",
+      isOpened: false,
+      imageAdjustment: {
+        x: -215,
+        y: 0
+      }
     },
     {
       dayNumber: 6,
-      audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      audioFileName: "cow",
+      imageFileName: "cow.jpg",
+      videoId: "4Y1_avLzXD0",
+      isOpened: false,
+      videoOffset: 199
     },
     {
       dayNumber: 7,

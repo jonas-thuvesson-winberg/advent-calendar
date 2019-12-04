@@ -24,7 +24,8 @@ export class AudioService {
   private readonly audioFiles: AudioMap = {
     sparkle: new NullableAudio("sparkle-sound-effect.mp3"),
     elephant: new NullableAudio("elephant.wav"),
-    tiger: new NullableAudio("tiger.mp3")
+    tiger: new NullableAudio("tiger.mp3"),
+    cow: new NullableAudio("Cow-moo-sound.mp3")
   };
 
   playAudio(name: string): void {

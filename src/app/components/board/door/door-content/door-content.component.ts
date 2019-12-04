@@ -39,6 +39,13 @@ export class DoorContentComponent implements OnInit, AfterViewInit {
         "background-image",
         `url(${img.src})`
       );
+      if (this.date.imageAdjustment) {
+        this.renderer.setStyle(
+          this.content.nativeElement,
+          "background-position",
+          `${this.date.imageAdjustment.x}px ${this.date.imageAdjustment.y}px`
+        );
+      }
     }
   }
 

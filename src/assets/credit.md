@@ -27,3 +27,13 @@ link: [https://www.nepalitimes.com/banner/how-many-tigers-in-nepal/](https://www
 
 credit: Tractor Of The Year<br>
 link: [https://tractoroftheyear.org/winners/](https://tractoroftheyear.org/winners/)
+
+## **bolibompa_draken.jpg**
+
+credit: SVT(?)<br>
+link: [https://jkpg.com/sv/jonkoping-huskvarna/springhjalpen/](https://jkpg.com/sv/jonkoping-huskvarna/springhjalpen/)
+
+## **cow_moo_sound.mp3**
+
+credit: Alexandar<br>
+link: [https://www.freesoundslibrary.com/cow-moo-sound/](https://www.freesoundslibrary.com/cow-moo-sound/)
