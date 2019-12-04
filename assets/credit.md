@@ -32,3 +32,8 @@ link: [https://tractoroftheyear.org/winners/](https://tractoroftheyear.org/winne
 
 credit: SVT(?)<br>
 link: [https://jkpg.com/sv/jonkoping-huskvarna/springhjalpen/](https://jkpg.com/sv/jonkoping-huskvarna/springhjalpen/)
+
+## **cow_moo_sound.mp3**
+
+credit: Alexandar<br>
+link: [https://www.freesoundslibrary.com/cow-moo-sound/](https://www.freesoundslibrary.com/cow-moo-sound/)
