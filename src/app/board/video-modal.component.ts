@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
-import { DateData } from "../board-data";
+import { DateData } from "./board-data";
 
 @Component({
   selector: "ac-video-modal",
