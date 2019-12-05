@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { DateData, boardData } from "./board-data";
+import { boardData } from "./board-data.model";
+import { DateData } from "./date-data.model";
 
 @Component({
   selector: "ac-board",

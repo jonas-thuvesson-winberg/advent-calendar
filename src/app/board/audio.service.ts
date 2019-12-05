@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 
-type AudioMap = Record<string, NullableAudio>;
+type AudioMap = Record<string, LazyAudio>;
 
-class NullableAudio {
+class LazyAudio {
   private audio: HTMLAudioElement;
 
   constructor(private src: string) {
@@ -20,12 +20,11 @@ class NullableAudio {
 
 @Injectable({ providedIn: "root" })
 export class AudioService {
-  private static audioSrc = "assets/sparkle-sound-effect.mp3";
   private readonly audioFiles: AudioMap = {
-    sparkle: new NullableAudio("sparkle-sound-effect.mp3"),
-    elephant: new NullableAudio("elephant.wav"),
-    tiger: new NullableAudio("tiger.mp3"),
-    cow: new NullableAudio("Cow-moo-sound.mp3")
+    sparkle: new LazyAudio("sparkle-sound-effect.mp3"),
+    elephant: new LazyAudio("elephant.wav"),
+    tiger: new LazyAudio("tiger.mp3"),
+    cow: new LazyAudio("Cow-moo-sound.mp3")
   };
 
   playAudio(name: string): void {
