@@ -7,11 +7,13 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
-    <div class="close-button">
-      <ac-icon-button
-        [iconName]="'close'"
-        (click)="closeModal()"
-      ></ac-icon-button>
+    <div class="close-button-container">
+      <div class="close-button">
+        <ac-icon-button
+          [iconName]="'close'"
+          (click)="closeModal()"
+        ></ac-icon-button>
+      </div>
     </div>
   </div>
 </div>

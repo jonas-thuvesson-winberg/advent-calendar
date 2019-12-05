@@ -17,7 +17,7 @@ export class VideoModalComponent {
     const url = this.sanitizer.bypassSecurityTrustResourceUrl(
       `https://www.youtube.com/embed/${
         this.date.videoId
-      }?controls=0&autoplay=1&start=${this.date.videoOffset || 0}`
+      }?autoplay=1&start=${this.date.videoOffset || 0}`
     );
     return url;
   }
