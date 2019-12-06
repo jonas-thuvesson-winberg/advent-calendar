@@ -57,16 +57,21 @@ export const boardData: BoardData = {
     {
       dayNumber: 7,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      imageFileName: "firetruck.jpg",
+      videoId: "d3Dib0EUtJc",
+      isOpened: true,
+      videoOffsets: { start: 153, end: 298 }
     },
     {
       dayNumber: 8,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      imageFileName: "baby_jake.jpg",
+      videoId: "XEWvzdql-mI",
+      isOpened: true,
+      imageAdjustment: {
+        y: -35,
+        x: -130
+      }
     },
     {
       dayNumber: 9,
