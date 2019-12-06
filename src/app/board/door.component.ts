@@ -9,6 +9,7 @@ import {
 } from "@angular/core";
 import { AudioService } from "src/app/board/audio.service";
 import { DateData } from "./date-data.model";
+import { StateService } from "./state.service";
 
 @Component({
   selector: "ac-door",
@@ -25,7 +26,11 @@ export class DoorComponent {
   @ViewChild("rightCover", { static: false })
   private rightCover: ElementRef<HTMLDivElement>;
 
-  constructor(private audioService: AudioService, private renderer: Renderer2) {
+  constructor(
+    private audioService: AudioService,
+    private stateService: StateService,
+    private renderer: Renderer2
+  ) {
     // this.open = false;
   }
 
@@ -33,6 +38,9 @@ export class DoorComponent {
     if (this.isDateAbleToOpen() && !this.date.isOpened) {
       this.playAudio();
       this.date.isOpened = true;
+      const state = this.stateService.getState();
+      state[this.date.dayNumber] = true;
+      this.stateService.setState(state);
     }
   }
 

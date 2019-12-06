@@ -59,7 +59,7 @@ export const boardData: BoardData = {
       audioFileName: "",
       imageFileName: "firetruck.jpg",
       videoId: "d3Dib0EUtJc",
-      isOpened: true,
+      isOpened: false,
       videoOffsets: { start: 153, end: 298 }
     },
     {
@@ -67,7 +67,7 @@ export const boardData: BoardData = {
       audioFileName: "",
       imageFileName: "baby_jake.jpg",
       videoId: "XEWvzdql-mI",
-      isOpened: true,
+      isOpened: false,
       imageAdjustment: {
         y: -35,
         x: -130
