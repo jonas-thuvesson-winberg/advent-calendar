@@ -33,7 +33,7 @@ export const boardData: BoardData = {
       imageFileName: "ant.jpg",
       videoId: "zMj1Zqf04Mg",
       isOpened: false,
-      videoOffset: 7
+      videoOffsets: { start: 7 }
     },
     {
       dayNumber: 5,
@@ -52,7 +52,7 @@ export const boardData: BoardData = {
       imageFileName: "cow.jpg",
       videoId: "4Y1_avLzXD0",
       isOpened: false,
-      videoOffset: 199
+      videoOffsets: { start: 199, end: 272 }
     },
     {
       dayNumber: 7,
