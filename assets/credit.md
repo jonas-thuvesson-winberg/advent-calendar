@@ -37,3 +37,8 @@ link: [https://jkpg.com/sv/jonkoping-huskvarna/springhjalpen/](https://jkpg.com/
 
 credit: Alexandar<br>
 link: [https://www.freesoundslibrary.com/cow-moo-sound/](https://www.freesoundslibrary.com/cow-moo-sound/)
+
+## **baby_jake.jpg**
+
+credit: ?
+link: [https://www.youtube.com/channel/UCjonc-9WOA15sLdggTYQGwA](https://www.youtube.com/channel/UCjonc-9WOA15sLdggTYQGwA)
