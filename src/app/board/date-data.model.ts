@@ -4,9 +4,6 @@ export interface DateData {
   imageFileName: string;
   videoId: string;
   isOpened: boolean;
-  imageAdjustment?: {
-    x: number;
-    y: number;
-  };
-  videoOffset?: number;
+  imageAdjustment?: { x: number; y: number };
+  videoOffsets?: { start: number; end?: number };
 }

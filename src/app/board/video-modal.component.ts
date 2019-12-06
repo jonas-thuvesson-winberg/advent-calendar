@@ -15,9 +15,13 @@ export class VideoModalComponent {
 
   getVideoUrl(): SafeResourceUrl {
     const url = this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://www.youtube.com/embed/${
-        this.date.videoId
-      }?autoplay=1&start=${this.date.videoOffset || 0}`
+      `https://www.youtube.com/embed/${this.date.videoId}?autoplay=1${
+        this.date.videoOffsets ? "&start=" + this.date.videoOffsets.start : ""
+      }${
+        this.date.videoOffsets && this.date.videoOffsets.end
+          ? "&end=" + this.date.videoOffsets.end
+          : ""
+      }`
     );
     return url;
   }
