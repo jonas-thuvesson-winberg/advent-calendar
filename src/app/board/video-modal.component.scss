@@ -1,4 +1,6 @@
 $breakpoint-large: 1365px;
+$breakpoint-medium: 900px;
+$breakpoint-small: 680px;
 
 .overlay {
   height: 100vh;
@@ -41,22 +43,14 @@ $breakpoint-large: 1365px;
     }
 
     .close-button-container {
-      @media only screen and (max-width: $breakpoint-large) {
-        height: 15%;
-      }
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       position: relative;
 
       .close-button {
+        position: relative;
         padding: 10px;
-      }
-
-      @media only screen and (max-height: 680px) {
-        .close-button {
-          display: none;
-        }
       }
     }
   }

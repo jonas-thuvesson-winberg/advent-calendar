@@ -1,7 +1,6 @@
 import {
   Component,
   Input,
-  OnInit,
   ViewChild,
   ElementRef,
   Renderer2,
@@ -16,7 +15,7 @@ import { DateData } from "./date-data.model";
   templateUrl: "./door.component.html",
   styleUrls: ["./door.component.scss"]
 })
-export class DoorComponent implements OnInit {
+export class DoorComponent {
   @Input() date: DateData;
   @Output() videoSelected: EventEmitter<string> = new EventEmitter<string>();
 
@@ -28,10 +27,6 @@ export class DoorComponent implements OnInit {
 
   constructor(private audioService: AudioService, private renderer: Renderer2) {
     // this.open = false;
-  }
-
-  ngOnInit() {
-    // console.log(this.open);
   }
 
   onClick(): void {

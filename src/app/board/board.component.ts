@@ -18,7 +18,6 @@ export class BoardComponent implements OnInit {
   }
 
   handleSelectedVideo(videoId: string) {
-    console.log(videoId);
     this.videoSelected = true;
     this.selected = this.dates.find(item => item.videoId === videoId);
   }

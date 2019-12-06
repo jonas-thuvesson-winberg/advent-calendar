@@ -1,3 +1,5 @@
-<div class="icon-container">
-  <span class="material-icons icon">{{ iconName }}</span>
+<div class="icon-container" [ngStyle]="getContainerSizes()">
+  <span class="material-icons icon" [ngStyle]="getIconSizes()">{{
+    iconName
+  }}</span>
 </div>

@@ -5,9 +5,7 @@ type AudioMap = Record<string, LazyAudio>;
 class LazyAudio {
   private audio: HTMLAudioElement;
 
-  constructor(private src: string) {
-    console.log("creating audio");
-  }
+  constructor(private src: string) {}
 
   getAudio() {
     if (!this.audio) {
@@ -28,7 +26,6 @@ export class AudioService {
   };
 
   playAudio(name: string): void {
-    console.log("playing");
     const audio = this.audioFiles[name].getAudio();
     audio.load();
     audio.play();
