@@ -10,7 +10,7 @@ import {
   EventEmitter
 } from "@angular/core";
 import { AudioService } from "src/app/board/audio.service";
-import { DateData } from "./date-data.model";
+import { DateData } from "../date-data.model";
 
 @Component({
   selector: "ac-door-content",

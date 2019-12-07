@@ -8,8 +8,8 @@ import {
   EventEmitter
 } from "@angular/core";
 import { AudioService } from "src/app/board/audio.service";
-import { DateData } from "./date-data.model";
-import { StateService } from "./state.service";
+import { DateData } from "../date-data.model";
+import { StateService } from "../state.service";
 
 @Component({
   selector: "ac-door",
@@ -48,7 +48,7 @@ export class DoorComponent {
     const hasValidValues =
       !!this.date.imageFileName &&
       (!!this.date.audioFileName || !!this.date.videoId);
-    const today = new Date().getDay() + 1;
+    const today = new Date().getDate() + 1;
     return today >= this.date.dayNumber && hasValidValues;
   }
 
