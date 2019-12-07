@@ -21,6 +21,9 @@ import { DateData } from "./date-data.model";
 export class VideoModalComponent {
   @Input() date: DateData;
   @Output() closingModal: EventEmitter<void> = new EventEmitter<void>();
+
+  @ViewChild("iframeContainer", { static: false })
+  iframeContainer: ElementRef;
   closeButtonRatio = 1;
 
   constructor(
@@ -29,6 +32,14 @@ export class VideoModalComponent {
   ) {}
 
   ngAfterViewInit(): void {
+    (this.iframeContainer.nativeElement as HTMLDivElement).innerHTML = `<iframe
+      class="iframe"
+      frameborder="0"
+      src="${this.getVideoUrl().toString()}"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      #videoIframe
+    ></iframe>`;
     this.resizeButton();
     this.eventManager.addGlobalEventListener("window", "resize", () => {
       this.resizeButton();
@@ -51,17 +62,14 @@ export class VideoModalComponent {
     }
   }
 
-  getVideoUrl(): SafeResourceUrl {
-    const url = this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://www.youtube.com/embed/${this.date.videoId}?autoplay=1${
-        this.date.videoOffsets ? "&start=" + this.date.videoOffsets.start : ""
-      }${
-        this.date.videoOffsets && this.date.videoOffsets.end
-          ? "&end=" + this.date.videoOffsets.end
-          : ""
-      }`
-    );
-    return url;
+  getVideoUrl(): string {
+    return `https://www.youtube.com/embed/${this.date.videoId}?autoplay=1${
+      this.date.videoOffsets ? "&start=" + this.date.videoOffsets.start : ""
+    }${
+      this.date.videoOffsets && this.date.videoOffsets.end
+        ? "&end=" + this.date.videoOffsets.end
+        : ""
+    }`;
   }
 
   closeModal(): void {

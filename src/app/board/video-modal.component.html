@@ -1,12 +1,8 @@
+<!-- src="https://www.youtube.com/embed/XpE8e6AYmfo" -->
 <div class="overlay">
   <div class="video-container">
-    <iframe
-      class="iframe"
-      [src]="getVideoUrl()"
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
+    <div class="iframe-container" #iframeContainer></div>
+
     <div class="close-button-container">
       <div class="close-button">
         <ac-icon-button

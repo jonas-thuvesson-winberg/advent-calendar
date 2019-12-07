@@ -33,12 +33,15 @@ $breakpoint-small: 680px;
       // flex-direction: column-reverse;
     }
 
-    .iframe {
-      width: 90%;
+    .iframe-container {
+      * {
+        background-color: blue;
+        width: 90% !important;
 
-      @media only screen and (max-width: $breakpoint-large) {
-        width: 100%;
-        height: 85%;
+        @media only screen and (max-width: $breakpoint-large) {
+          width: 100%;
+          height: 85%;
+        }
       }
     }
 
