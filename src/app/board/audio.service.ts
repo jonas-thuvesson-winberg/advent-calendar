@@ -22,7 +22,8 @@ export class AudioService {
     sparkle: new LazyAudio("sparkle-sound-effect.mp3"),
     elephant: new LazyAudio("elephant.wav"),
     tiger: new LazyAudio("tiger.mp3"),
-    cow: new LazyAudio("Cow-moo-sound.mp3")
+    cow: new LazyAudio("Cow-moo-sound.mp3"),
+    cat: new LazyAudio("cat.wav")
   };
 
   playAudio(name: string): void {

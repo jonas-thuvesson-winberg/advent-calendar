@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { boardData } from "./board-data.model";
+import { BOARD_DATA } from "./board-data.model";
 import { DateData } from "./date-data.model";
 import { StateService } from "./state.service";
 
@@ -17,7 +17,7 @@ export class BoardComponent implements OnInit {
 
   ngOnInit() {
     this.videoSelected = false;
-    this.dates = boardData.dates;
+    this.dates = BOARD_DATA.dates;
     const state = this.stateService.getState();
     if (state) {
       this.dates = this.dates.map(date => {

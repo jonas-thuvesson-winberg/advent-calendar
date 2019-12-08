@@ -4,7 +4,7 @@ export interface BoardData {
   dates: DateData[];
 }
 
-export const boardData: BoardData = {
+export const BOARD_DATA: BoardData = {
   dates: [
     {
       dayNumber: 1,
@@ -75,24 +75,34 @@ export const boardData: BoardData = {
     },
     {
       dayNumber: 9,
-      audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      audioFileName: "cat",
+      imageFileName: "cat.jpg",
+      videoId: "ohUijzak114",
+      isOpened: false,
+      imageAdjustment: {
+        x: -80,
+        y: 0
+      }
     },
     {
       dayNumber: 10,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      imageFileName: "babblarna.jpg",
+      videoId: "lMmk3DYUnTM",
+      isOpened: false,
+      isUnlocked: false,
+      imageAdjustment: {
+        x: -200,
+        y: 0
+      }
     },
     {
       dayNumber: 11,
       audioFileName: "",
       imageFileName: "",
       videoId: "",
-      isOpened: false
+      isOpened: false,
+      isUnlocked: false
     },
     {
       dayNumber: 12,
