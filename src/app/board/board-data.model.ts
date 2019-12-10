@@ -96,19 +96,26 @@ export const BOARD_DATA: BoardData = {
         y: 0
       }
     },
+
     {
       dayNumber: 11,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      imageFileName: "helicopter.jpeg",
+      videoId: "eDvSrMnL-8M",
       isOpened: false,
-      isUnlocked: false
+      imageAdjustment: {
+        x: -130,
+        y: 0
+      },
+      videoOffsets: {
+        start: 82
+      }
     },
     {
       dayNumber: 12,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      imageFileName: "polar_bear.jpg",
+      videoId: "spx-0FrsLKQ",
       isOpened: false
     },
     {
