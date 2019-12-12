@@ -121,23 +121,35 @@ export const BOARD_DATA: BoardData = {
     {
       dayNumber: 13,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      imageFileName: "lucia.webp",
+      videoId: "-rIu-8R1cj4",
       isOpened: false
     },
     {
       dayNumber: 14,
-      audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      audioFileName: "train",
+      imageFileName: "train.jpg",
+      videoId: "L_AzHWCOODY",
+      isOpened: false,
+      imageAdjustment: {
+        x: -40,
+        y: -20
+      }
     },
     {
       dayNumber: 15,
-      audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      audioFileName: "wave",
+      imageFileName: "boat.jpg",
+      videoId: "8SzzFqXMJxY",
+      isOpened: false,
+      videoOffsets: {
+        start: 88,
+        end: 166
+      },
+      imageAdjustment: {
+        x: -20,
+        y: 0
+      }
     },
     {
       dayNumber: 16,
