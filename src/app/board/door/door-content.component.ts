@@ -31,31 +31,26 @@ export class DoorContentComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    if (this.date.imageFileName) {
+    if (this.date.image.fileName) {
       const img = new Image();
-      img.src = `assets/${this.date.imageFileName}`;
+      img.src = `assets/${this.date.image.fileName}`;
       this.renderer.setAttribute(this.image.nativeElement, "src", `${img.src}`);
-      if (this.date.imageAdjustment) {
-        console.log(
-          this.date.imageFileName,
-          this.date.imageAdjustment.x,
-          this.date.imageAdjustment.y
-        );
+      if (this.date.image.adjustment) {
         this.renderer.setStyle(
           this.image.nativeElement,
           "top",
-          `${(this.date.imageAdjustment.x || 0) - 0}px`
+          `${(this.date.image.adjustment.top || 0) - 0}px`
         );
         this.renderer.setStyle(
           this.image.nativeElement,
           "left",
-          `${(this.date.imageAdjustment.y || 0) - 0}px`
+          `${(this.date.image.adjustment.left || 0) - 0}px`
         );
-        if (this.date.imageAdjustment.height) {
+        if (this.date.image.adjustment.height) {
           this.renderer.setStyle(
             this.image.nativeElement,
             "height",
-            `${this.date.imageAdjustment.height * 350}px`
+            `${this.date.image.adjustment.height * 350}px`
           );
         }
       }
@@ -63,7 +58,7 @@ export class DoorContentComponent implements OnInit, AfterViewInit {
   }
 
   playVideo(): void {
-    this.videoSelected.emit(this.date.videoId);
+    this.videoSelected.emit(this.date.video.ref);
     // window.open(`http://youtube.com/watch?v=${this.date.videoId}`, "_blank");
   }
 

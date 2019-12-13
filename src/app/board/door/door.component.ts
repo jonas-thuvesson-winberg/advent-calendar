@@ -30,9 +30,7 @@ export class DoorComponent {
     private audioService: AudioService,
     private stateService: StateService,
     private renderer: Renderer2
-  ) {
-    // this.open = false;
-  }
+  ) {}
 
   onClick(): void {
     if (this.isDoorUnlocked() && !this.date.isOpened) {
@@ -47,8 +45,8 @@ export class DoorComponent {
   private isDoorUnlocked(): boolean {
     if (this.date.isUnlocked) return true;
     const hasValidValues =
-      !!this.date.imageFileName &&
-      (!!this.date.audioFileName || !!this.date.videoId);
+      !!this.date.image.fileName &&
+      (!!this.date.audioFileName || !!this.date.video.ref);
     const today = new Date().getDate();
     return today >= this.date.dayNumber && hasValidValues;
   }
@@ -56,11 +54,6 @@ export class DoorComponent {
   private playAudio(): void {
     this.audioService.playAudio("sparkle");
   }
-
-  // private playContentAudio(): void {
-  //   if (this.date.audioFileName)
-  //     this.audioService.playAudio(this.date.audioFileName);
-  // }
 
   propagateVideoSelected(videoId: string): void {
     this.videoSelected.emit(videoId);

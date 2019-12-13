@@ -10,7 +10,7 @@ import { CalendarDateComponent } from "./door/calendar-date.component";
 
 import { VideoModalComponent } from "./video-modal/video-modal.component";
 import { CloseButtonComponent } from "./video-modal/close-button.component";
-import { VideoFrameComponent } from "./video-modal/video-frame.component";
+import { YoutubeFrameComponent } from "./video-modal/youtube-frame.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { VideoFrameComponent } from "./video-modal/video-frame.component";
     VideoModalComponent,
     CalendarDateComponent,
     CloseButtonComponent,
-    VideoFrameComponent
+    YoutubeFrameComponent
   ],
   imports: [BrowserModule],
   exports: [BoardComponent],

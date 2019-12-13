@@ -8,11 +8,7 @@
     [starred]="dateHasPassed()"
     [dayNumber]="date.dayNumber"
   ></ac-calendar-date>
-  <div
-    class="cover left closed"
-    [ngClass]="{ open: date.isOpened }"
-    #leftCover
-  ></div>
+  <div class="cover left" [ngClass]="{ open: date.isOpened }" #leftCover></div>
   <div
     class="cover right"
     [ngClass]="{ open: date.isOpened }"

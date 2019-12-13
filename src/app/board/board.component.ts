@@ -27,9 +27,9 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  handleSelectedVideo(videoId: string) {
+  handleSelectedVideo(videoRef: string) {
     this.videoSelected = true;
-    this.selected = this.dates.find(item => item.videoId === videoId);
+    this.selected = this.dates.find(item => item.video.ref === videoRef);
   }
 
   handleClosingModal() {

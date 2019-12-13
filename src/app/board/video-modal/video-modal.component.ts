@@ -24,16 +24,19 @@ export class VideoModalComponent implements OnInit {
   }
 
   getVideoUrl(): SafeResourceUrl {
-    const url = this.sanitizer.bypassSecurityTrustResourceUrl(
-      `https://www.youtube.com/embed/${this.date.videoId}?autoplay=1${
-        this.date.videoOffsets ? "&start=" + this.date.videoOffsets.start : ""
+    return this.constructYoutubeUrl();
+  }
+
+  private constructYoutubeUrl(): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(
+      `https://www.youtube.com/embed/${this.date.video.ref}?autoplay=1${
+        this.date.video.offsets ? "&start=" + this.date.video.offsets.start : ""
       }${
-        this.date.videoOffsets && this.date.videoOffsets.end
-          ? "&end=" + this.date.videoOffsets.end
+        this.date.video.offsets && this.date.video.offsets.end
+          ? "&end=" + this.date.video.offsets.end
           : ""
       }`
     );
-    return url;
   }
 
   closeModal(): void {

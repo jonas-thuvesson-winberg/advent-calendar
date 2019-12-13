@@ -1,6 +1,6 @@
 export type StateMap = Record<number, boolean>;
 
-export const state: StateMap = {
+export const INIT_STATE: StateMap = {
   1: false,
   2: false,
   3: false,
