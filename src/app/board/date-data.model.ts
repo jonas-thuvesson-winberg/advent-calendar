@@ -6,4 +6,5 @@ export interface DateData {
   isOpened: boolean;
   imageAdjustment?: { x: number; y: number };
   videoOffsets?: { start: number; end?: number };
+  isUnlocked?: boolean;
 }

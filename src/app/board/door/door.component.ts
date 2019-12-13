@@ -8,8 +8,8 @@ import {
   EventEmitter
 } from "@angular/core";
 import { AudioService } from "src/app/board/audio.service";
-import { DateData } from "./date-data.model";
-import { StateService } from "./state.service";
+import { DateData } from "../date-data.model";
+import { StateService } from "../state.service";
 
 @Component({
   selector: "ac-door",
@@ -35,7 +35,7 @@ export class DoorComponent {
   }
 
   onClick(): void {
-    if (this.isDateAbleToOpen() && !this.date.isOpened) {
+    if (this.isDoorUnlocked() && !this.date.isOpened) {
       this.playAudio();
       this.date.isOpened = true;
       const state = this.stateService.getState();
@@ -44,11 +44,12 @@ export class DoorComponent {
     }
   }
 
-  private isDateAbleToOpen(): boolean {
+  private isDoorUnlocked(): boolean {
+    if (this.date.isUnlocked) return true;
     const hasValidValues =
       !!this.date.imageFileName &&
       (!!this.date.audioFileName || !!this.date.videoId);
-    const today = new Date().getDay() + 1;
+    const today = new Date().getDate();
     return today >= this.date.dayNumber && hasValidValues;
   }
 
@@ -71,6 +72,6 @@ export class DoorComponent {
   }
 
   dateHasPassed(): boolean {
-    return this.isDateAbleToOpen();
+    return this.isDoorUnlocked();
   }
 }

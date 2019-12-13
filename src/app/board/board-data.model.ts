@@ -4,7 +4,7 @@ export interface BoardData {
   dates: DateData[];
 }
 
-export const boardData: BoardData = {
+export const BOARD_DATA: BoardData = {
   dates: [
     {
       dayNumber: 1,
@@ -75,52 +75,81 @@ export const boardData: BoardData = {
     },
     {
       dayNumber: 9,
-      audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      audioFileName: "cat",
+      imageFileName: "cat.jpg",
+      videoId: "ohUijzak114",
+      isOpened: false,
+      imageAdjustment: {
+        x: -80,
+        y: 0
+      }
     },
     {
       dayNumber: 10,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      imageFileName: "babblarna.jpg",
+      videoId: "lMmk3DYUnTM",
+      isOpened: false,
+      isUnlocked: false,
+      imageAdjustment: {
+        x: -200,
+        y: 0
+      }
     },
+
     {
       dayNumber: 11,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      imageFileName: "helicopter.jpeg",
+      videoId: "eDvSrMnL-8M",
+      isOpened: false,
+      imageAdjustment: {
+        x: -130,
+        y: 0
+      },
+      videoOffsets: {
+        start: 82
+      }
     },
     {
       dayNumber: 12,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      imageFileName: "polar_bear.jpg",
+      videoId: "spx-0FrsLKQ",
       isOpened: false
     },
     {
       dayNumber: 13,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      imageFileName: "lucia.webp",
+      videoId: "-rIu-8R1cj4",
       isOpened: false
     },
     {
       dayNumber: 14,
-      audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      audioFileName: "train",
+      imageFileName: "train.jpg",
+      videoId: "L_AzHWCOODY",
+      isOpened: false,
+      imageAdjustment: {
+        x: -40,
+        y: -20
+      }
     },
     {
       dayNumber: 15,
-      audioFileName: "",
-      imageFileName: "",
-      videoId: "",
-      isOpened: false
+      audioFileName: "wave",
+      imageFileName: "boat.jpg",
+      videoId: "8SzzFqXMJxY",
+      isOpened: false,
+      videoOffsets: {
+        start: 88,
+        end: 166
+      },
+      imageAdjustment: {
+        x: -20,
+        y: 0
+      }
     },
     {
       dayNumber: 16,

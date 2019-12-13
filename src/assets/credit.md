@@ -42,3 +42,8 @@ link: [https://www.freesoundslibrary.com/cow-moo-sound/](https://www.freesoundsl
 
 credit: ?
 link: [https://www.youtube.com/channel/UCjonc-9WOA15sLdggTYQGwA](https://www.youtube.com/channel/UCjonc-9WOA15sLdggTYQGwA)
+
+## **babblarna.jpg**
+
+credit: Anneli Tisell(?)
+link: [https://www.kickstarter.com/projects/721320966/babblarna-a-movie-on-youtube](https://www.kickstarter.com/projects/721320966/babblarna-a-movie-on-youtube)
