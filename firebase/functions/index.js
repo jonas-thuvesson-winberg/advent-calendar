@@ -4,23 +4,90 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 let db = admin.firestore();
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-exports.helloWorld = functions.https.onRequest((request, response) => {
-  db.collection("ips")
-    .doc("192.168.1.1")
+const dedupeAndSortArray = arr => {
+  let newArr = [...new Set(arr)];
+  newArr = newArr.sort((a, b) => {
+    if (Number(a) < Number(b)) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
+  return newArr;
+};
+
+const saveOrUpdateIpState = async (req, res) => {
+  const body = req.body;
+  if (!body.daysOpened) {
+    return `"daysOpened" was missing in request.`;
+  }
+
+  // 46.59.53.202
+  if (!body.clientIp) {
+    return `"clientIp" was missing in request.`;
+  }
+
+  const docRef = db.collection("ips").doc(body.clientIp);
+
+  const response = await docRef
     .get()
-    .then(x => {
-      if (!x.exists) {
-        response.send("nope!");
-        return null;
+    .then(async doc => {
+      if (!doc.exists) {
+        return await docRef.set({
+          daysOpened: dedupeAndSortArray(body.daysOpened)
+        });
       } else {
-        response.send("yes!");
-        return null;
+        const dbData = doc.data();
+        let newData = [...dbData.daysOpened, ...body.daysOpened];
+        newData = dedupeAndSortArray(newData);
+
+        return await docRef.set({ daysOpened: newData });
       }
     })
-    .catch(err => response.send("oops error " + err));
+    .catch(err => res.send("oops error " + err));
+  return response;
+};
+
+const getIpState = async (req, res) => {
+  if (!req.query) {
+    return `query string was empty`;
+  }
+
+  if (!req.query.clientIp) {
+    return `"clientIp" was missing in query string`;
+  }
+
+  const docRef = db.collection("ips").doc(req.query.clientIp);
+
+  const response = await docRef
+    .get()
+    .then(doc => {
+      if (!doc.exists) {
+        return { daysOpened: [] };
+      } else {
+        const dbData = doc.data();
+        return dbData;
+      }
+    })
+    .catch(err => res.send("oops error " + err));
+  return response;
+};
+
+exports.ipState = functions.https.onRequest((req, res) => {
+  const method = req.method;
+  if (method !== "POST" && method !== "GET") {
+    res.send(`Only POST or GET allowed! ${req.method} was used.`);
+  }
+
+  if (method === "POST") {
+    saveOrUpdateIpState(req, res)
+      .then(x => res.send(x))
+      .catch(err => res.send("oops error " + err));
+  } else {
+    getIpState(req, res)
+      .then(x => res.send(x))
+      .catch(err => res.send("oops error " + err));
+  }
 
   // functions.response.send("Hello from Firebase!");
 });
