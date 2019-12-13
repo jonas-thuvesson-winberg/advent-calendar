@@ -1,10 +1,15 @@
 export interface DateData {
   dayNumber: number;
   audioFileName: string;
-  imageFileName: string;
-  videoId: string;
+  image: {
+    fileName: string;
+    adjustment?: { top?: number; left?: number; height?: number };
+  };
+  video: {
+    offsets?: { start: number; end?: number };
+    ref: string;
+    provider: "youtube";
+  };
   isOpened: boolean;
-  imageAdjustment?: { x: number; y: number };
-  videoOffsets?: { start: number; end?: number };
   isUnlocked?: boolean;
 }

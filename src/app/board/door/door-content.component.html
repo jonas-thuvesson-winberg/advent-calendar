@@ -1,6 +1,7 @@
-<div class="content" #content>
+<div class="content">
+  <img class="image" #image />
   <div class="icon-group">
-    <div class="icon play-video-button" *ngIf="!!date.videoId">
+    <div class="icon play-video-button" *ngIf="!!date.video.ref">
       <ac-icon-button
         (click)="playVideo()"
         iconName="personal_video"

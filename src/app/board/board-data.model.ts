@@ -9,209 +9,316 @@ export const BOARD_DATA: BoardData = {
     {
       dayNumber: 1,
       audioFileName: "elephant",
-      imageFileName: "elephant.jpg",
-      videoId: "SNggmeilXDQ",
-      isOpened: false
+      video: {
+        ref: "SNggmeilXDQ",
+        provider: "youtube"
+      },
+      isOpened: false,
+      image: {
+        fileName: "elephant.jpg",
+        adjustment: {
+          height: 1.3,
+          left: -80,
+          top: -50
+        }
+      }
     },
     {
       dayNumber: 2,
       audioFileName: "",
-      imageFileName: "tractor.jpg",
-      videoId: "y5n3FeVKh2c",
+      image: {
+        fileName: "tractor.jpg",
+        adjustment: {
+          left: -100
+        }
+      },
+      video: {
+        ref: "y5n3FeVKh2c",
+        provider: "youtube"
+      },
       isOpened: false
     },
     {
       dayNumber: 3,
       audioFileName: "tiger",
-      imageFileName: "tiger.jpg",
-      videoId: "1vUuHqqTQTw",
+      image: {
+        fileName: "tiger.jpg",
+        adjustment: {
+          left: -120,
+          top: -20
+        }
+      },
+      video: {
+        ref: "1vUuHqqTQTw",
+        provider: "youtube"
+      },
       isOpened: false
     },
     {
       dayNumber: 4,
       audioFileName: "",
-      imageFileName: "ant.jpg",
-      videoId: "zMj1Zqf04Mg",
-      isOpened: false,
-      videoOffsets: { start: 7 }
+      image: {
+        fileName: "ant.jpg",
+        adjustment: {
+          left: -50,
+          top: -20
+        }
+      },
+      video: {
+        ref: "zMj1Zqf04Mg",
+        provider: "youtube",
+        offsets: {
+          start: 7
+        }
+      },
+      isOpened: false
     },
     {
       dayNumber: 5,
       audioFileName: "",
-      imageFileName: "draken_bolibompa.jpg",
-      videoId: "M5x95d6eMC8",
-      isOpened: false,
-      imageAdjustment: {
-        x: -215,
-        y: 0
-      }
+      image: {
+        fileName: "draken_bolibompa.jpg",
+        adjustment: {
+          left: -100
+        }
+      },
+      video: {
+        ref: "M5x95d6eMC8",
+        provider: "youtube"
+      },
+      isOpened: false
     },
     {
       dayNumber: 6,
       audioFileName: "cow",
-      imageFileName: "cow.jpg",
-      videoId: "4Y1_avLzXD0",
-      isOpened: false,
-      videoOffsets: { start: 199, end: 272 }
+      image: {
+        fileName: "cow.jpg"
+      },
+      video: {
+        ref: "4Y1_avLzXD0",
+        provider: "youtube",
+        offsets: {
+          start: 199,
+          end: 272
+        }
+      },
+      isOpened: false
     },
     {
       dayNumber: 7,
       audioFileName: "",
-      imageFileName: "firetruck.jpg",
-      videoId: "d3Dib0EUtJc",
-      isOpened: false,
-      videoOffsets: { start: 153, end: 298 }
+      image: {
+        fileName: "firetruck.jpg"
+      },
+      video: {
+        ref: "d3Dib0EUtJc",
+        provider: "youtube",
+        offsets: {
+          start: 153,
+          end: 298
+        }
+      },
+      isOpened: false
     },
     {
       dayNumber: 8,
       audioFileName: "",
-      imageFileName: "baby_jake.jpg",
-      videoId: "XEWvzdql-mI",
-      isOpened: false,
-      imageAdjustment: {
-        y: -35,
-        x: -130
-      }
+      image: {
+        fileName: "baby_jake.jpg",
+        adjustment: {
+          left: -35,
+          top: -40
+        }
+      },
+      video: {
+        ref: "XEWvzdql-mI",
+        provider: "youtube"
+      },
+      isOpened: false
     },
     {
       dayNumber: 9,
       audioFileName: "cat",
-      imageFileName: "cat.jpg",
-      videoId: "ohUijzak114",
-      isOpened: false,
-      imageAdjustment: {
-        x: -80,
-        y: 0
-      }
+      image: {
+        fileName: "cat.jpg",
+        adjustment: {
+          left: -80
+        }
+      },
+      video: {
+        ref: "ohUijzak114",
+        provider: "youtube"
+      },
+      isOpened: false
     },
     {
       dayNumber: 10,
       audioFileName: "",
-      imageFileName: "babblarna.jpg",
-      videoId: "lMmk3DYUnTM",
+      image: {
+        fileName: "babblarna.jpg",
+        adjustment: { left: -100 }
+      },
+      video: {
+        ref: "lMmk3DYUnTM",
+        provider: "youtube"
+      },
       isOpened: false,
-      isUnlocked: false,
-      imageAdjustment: {
-        x: -200,
-        y: 0
-      }
+      isUnlocked: false
     },
 
     {
       dayNumber: 11,
       audioFileName: "",
-      imageFileName: "helicopter.jpeg",
-      videoId: "eDvSrMnL-8M",
-      isOpened: false,
-      imageAdjustment: {
-        x: -130,
-        y: 0
+      image: {
+        fileName: "helicopter.jpeg",
+        adjustment: { left: -150 }
       },
-      videoOffsets: {
-        start: 82
-      }
+      video: {
+        ref: "eDvSrMnL-8M",
+        provider: "youtube",
+        offsets: {
+          start: 82
+        }
+      },
+      isOpened: false
     },
     {
       dayNumber: 12,
       audioFileName: "",
-      imageFileName: "polar_bear.jpg",
-      videoId: "spx-0FrsLKQ",
+      image: {
+        fileName: "polar_bear.jpg",
+        adjustment: {
+          left: -150
+        }
+      },
+      video: {
+        ref: "spx-0FrsLKQ",
+        provider: "youtube"
+      },
       isOpened: false
     },
     {
       dayNumber: 13,
       audioFileName: "",
-      imageFileName: "lucia.webp",
-      videoId: "-rIu-8R1cj4",
+      image: {
+        fileName: "lucia.jpg",
+        adjustment: {
+          height: 0.86,
+          left: -150
+        }
+      },
+      video: {
+        ref: "-rIu-8R1cj4",
+        provider: "youtube"
+      },
       isOpened: false
     },
     {
       dayNumber: 14,
       audioFileName: "train",
-      imageFileName: "train.jpg",
-      videoId: "L_AzHWCOODY",
-      isOpened: false,
-      imageAdjustment: {
-        x: -40,
-        y: -20
-      }
+      image: {
+        fileName: "train.jpg",
+        adjustment: {
+          top: -40,
+          left: -20
+        }
+      },
+      video: {
+        ref: "L_AzHWCOODY",
+        provider: "youtube"
+      },
+      isOpened: false
     },
     {
       dayNumber: 15,
       audioFileName: "wave",
-      imageFileName: "boat.jpg",
-      videoId: "8SzzFqXMJxY",
-      isOpened: false,
-      videoOffsets: {
-        start: 88,
-        end: 166
+      image: {
+        fileName: "boat.jpg",
+        adjustment: {
+          top: -20
+        }
       },
-      imageAdjustment: {
-        x: -20,
-        y: 0
-      }
+      video: {
+        ref: "8SzzFqXMJxY",
+        offsets: {
+          start: 88,
+          end: 166
+        },
+        provider: "youtube"
+      },
+      isOpened: false
     },
     {
       dayNumber: 16,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      image: {
+        fileName: ""
+      },
+      video: {
+        ref: "",
+        provider: "youtube"
+      },
       isOpened: false
     },
     {
       dayNumber: 17,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      image: {
+        fileName: ""
+      },
+      video: {
+        ref: "",
+        provider: "youtube"
+      },
       isOpened: false
     },
     {
       dayNumber: 18,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      image: { fileName: "" },
+      video: { ref: "", provider: "youtube" },
       isOpened: false
     },
     {
       dayNumber: 19,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      image: { fileName: "" },
+      video: { ref: "", provider: "youtube" },
       isOpened: false
     },
     {
       dayNumber: 20,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      image: { fileName: "" },
+      video: { ref: "", provider: "youtube" },
       isOpened: false
     },
     {
       dayNumber: 21,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      image: { fileName: "" },
+      video: { ref: "", provider: "youtube" },
       isOpened: false
     },
     {
       dayNumber: 22,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      image: { fileName: "" },
+      video: { ref: "", provider: "youtube" },
       isOpened: false
     },
     {
       dayNumber: 23,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      image: { fileName: "" },
+      video: { ref: "", provider: "youtube" },
       isOpened: false
     },
     {
       dayNumber: 24,
       audioFileName: "",
-      imageFileName: "",
-      videoId: "",
+      image: { fileName: "" },
+      video: { ref: "", provider: "youtube" },
       isOpened: false
     }
   ]

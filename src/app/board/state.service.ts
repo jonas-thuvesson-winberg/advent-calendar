@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { StateMap, state } from "./state.model";
+import { StateMap, INIT_STATE } from "./state.model";
 
 @Injectable({ providedIn: "root" })
 export class StateService {
@@ -8,7 +8,7 @@ export class StateService {
   constructor() {
     const stateString = localStorage.getItem("advent-calendar-state");
     if (!stateString) {
-      this.state = state;
+      this.state = INIT_STATE;
     } else {
       this.state = JSON.parse(stateString);
     }
