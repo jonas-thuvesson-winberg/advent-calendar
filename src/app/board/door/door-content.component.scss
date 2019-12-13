@@ -2,12 +2,20 @@
   overflow: hidden;
   position: relative;
   // background-image: url("../../../../../assets/elephant.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 200%;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: 200%;
   padding: 150px;
 
   transition: all 0s;
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 350px;
+  }
+
   .icon-group {
     display: flex;
     flex-direction: row;

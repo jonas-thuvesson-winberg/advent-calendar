@@ -21,8 +21,8 @@ export class DoorContentComponent implements OnInit, AfterViewInit {
   @Input() date: DateData;
   @Output() videoSelected: EventEmitter<string> = new EventEmitter<string>();
 
-  @ViewChild("content", { static: false })
-  private content: ElementRef<HTMLDivElement>;
+  @ViewChild("image", { static: false })
+  private image: ElementRef<HTMLImageElement>;
 
   constructor(private audioService: AudioService, private renderer: Renderer2) {
     // this.open = false;
@@ -34,17 +34,30 @@ export class DoorContentComponent implements OnInit, AfterViewInit {
     if (this.date.imageFileName) {
       const img = new Image();
       img.src = `assets/${this.date.imageFileName}`;
-      this.renderer.setStyle(
-        this.content.nativeElement,
-        "background-image",
-        `url(${img.src})`
-      );
+      this.renderer.setAttribute(this.image.nativeElement, "src", `${img.src}`);
       if (this.date.imageAdjustment) {
-        this.renderer.setStyle(
-          this.content.nativeElement,
-          "background-position",
-          `${this.date.imageAdjustment.x}px ${this.date.imageAdjustment.y}px`
+        console.log(
+          this.date.imageFileName,
+          this.date.imageAdjustment.x,
+          this.date.imageAdjustment.y
         );
+        this.renderer.setStyle(
+          this.image.nativeElement,
+          "top",
+          `${(this.date.imageAdjustment.x || 0) - 0}px`
+        );
+        this.renderer.setStyle(
+          this.image.nativeElement,
+          "left",
+          `${(this.date.imageAdjustment.y || 0) - 0}px`
+        );
+        if (this.date.imageAdjustment.height) {
+          this.renderer.setStyle(
+            this.image.nativeElement,
+            "height",
+            `${this.date.imageAdjustment.height * 350}px`
+          );
+        }
       }
     }
   }

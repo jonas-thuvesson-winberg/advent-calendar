@@ -11,21 +11,33 @@ export const BOARD_DATA: BoardData = {
       audioFileName: "elephant",
       imageFileName: "elephant.jpg",
       videoId: "SNggmeilXDQ",
-      isOpened: false
+      isOpened: false,
+      imageAdjustment: {
+        height: 1.3,
+        y: -80,
+        x: -50
+      }
     },
     {
       dayNumber: 2,
       audioFileName: "",
       imageFileName: "tractor.jpg",
       videoId: "y5n3FeVKh2c",
-      isOpened: false
+      isOpened: false,
+      imageAdjustment: {
+        y: -100
+      }
     },
     {
       dayNumber: 3,
       audioFileName: "tiger",
       imageFileName: "tiger.jpg",
       videoId: "1vUuHqqTQTw",
-      isOpened: false
+      isOpened: false,
+      imageAdjustment: {
+        y: -120,
+        x: -20
+      }
     },
     {
       dayNumber: 4,
@@ -33,7 +45,11 @@ export const BOARD_DATA: BoardData = {
       imageFileName: "ant.jpg",
       videoId: "zMj1Zqf04Mg",
       isOpened: false,
-      videoOffsets: { start: 7 }
+      videoOffsets: { start: 7 },
+      imageAdjustment: {
+        y: -50,
+        x: -20
+      }
     },
     {
       dayNumber: 5,
@@ -42,8 +58,7 @@ export const BOARD_DATA: BoardData = {
       videoId: "M5x95d6eMC8",
       isOpened: false,
       imageAdjustment: {
-        x: -215,
-        y: 0
+        y: -100
       }
     },
     {
@@ -70,7 +85,7 @@ export const BOARD_DATA: BoardData = {
       isOpened: false,
       imageAdjustment: {
         y: -35,
-        x: -130
+        x: -40
       }
     },
     {
@@ -80,8 +95,7 @@ export const BOARD_DATA: BoardData = {
       videoId: "ohUijzak114",
       isOpened: false,
       imageAdjustment: {
-        x: -80,
-        y: 0
+        y: -80
       }
     },
     {
@@ -91,10 +105,7 @@ export const BOARD_DATA: BoardData = {
       videoId: "lMmk3DYUnTM",
       isOpened: false,
       isUnlocked: false,
-      imageAdjustment: {
-        x: -200,
-        y: 0
-      }
+      imageAdjustment: { y: -100 }
     },
 
     {
@@ -103,10 +114,7 @@ export const BOARD_DATA: BoardData = {
       imageFileName: "helicopter.jpeg",
       videoId: "eDvSrMnL-8M",
       isOpened: false,
-      imageAdjustment: {
-        x: -130,
-        y: 0
-      },
+      imageAdjustment: { y: -150 },
       videoOffsets: {
         start: 82
       }
@@ -116,14 +124,21 @@ export const BOARD_DATA: BoardData = {
       audioFileName: "",
       imageFileName: "polar_bear.jpg",
       videoId: "spx-0FrsLKQ",
-      isOpened: false
+      isOpened: false,
+      imageAdjustment: {
+        y: -150
+      }
     },
     {
       dayNumber: 13,
       audioFileName: "",
-      imageFileName: "lucia.webp",
+      imageFileName: "lucia.jpg",
       videoId: "-rIu-8R1cj4",
-      isOpened: false
+      isOpened: false,
+      imageAdjustment: {
+        height: 0.86,
+        y: -150
+      }
     },
     {
       dayNumber: 14,
@@ -147,8 +162,7 @@ export const BOARD_DATA: BoardData = {
         end: 166
       },
       imageAdjustment: {
-        x: -20,
-        y: 0
+        x: -20
       }
     },
     {
