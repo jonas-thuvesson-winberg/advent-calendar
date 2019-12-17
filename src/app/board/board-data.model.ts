@@ -252,10 +252,10 @@ export const BOARD_DATA: BoardData = {
       dayNumber: 16,
       audioFileName: "",
       image: {
-        fileName: ""
+        fileName: "spider.png"
       },
       video: {
-        ref: "",
+        ref: "Ryr1sShWGko",
         provider: "youtube"
       },
       isOpened: false
@@ -264,26 +264,49 @@ export const BOARD_DATA: BoardData = {
       dayNumber: 17,
       audioFileName: "",
       image: {
-        fileName: ""
+        fileName: "bob.png",
+        adjustment: {
+          left: -30,
+          height: 0.9
+        }
       },
       video: {
-        ref: "",
-        provider: "youtube"
+        ref: "a4oFmaNO0SY",
+        provider: "youtube",
+        offsets: {
+          start: 1
+        }
       },
       isOpened: false
     },
     {
       dayNumber: 18,
       audioFileName: "",
-      image: { fileName: "" },
-      video: { ref: "", provider: "youtube" },
+      image: {
+        fileName: "xmas-tree.png",
+
+        adjustment: {
+          left: -33,
+          height: 1.2
+        }
+      },
+      video: {
+        ref: "xQyYyh7vsSU",
+        provider: "youtube"
+      },
       isOpened: false
     },
     {
       dayNumber: 19,
       audioFileName: "",
-      image: { fileName: "" },
-      video: { ref: "", provider: "youtube" },
+      image: {
+        fileName: "digging_machine.jpg",
+        adjustment: {
+          height: 0.9,
+          left: -200
+        }
+      },
+      video: { ref: "h0EezjY9gPQ", provider: "youtube" },
       isOpened: false
     },
     {
