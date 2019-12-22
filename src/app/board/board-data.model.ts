@@ -361,10 +361,17 @@ export const BOARD_DATA: BoardData = {
     },
     {
       dayNumber: 23,
-      audioFileName: "",
-      image: { fileName: "" },
-      video: { ref: "", provider: "youtube" },
-      isOpened: false
+      audioFileName: "horseNeigh",
+      image: {
+        fileName: "horse.jpg",
+        adjustment: {
+          left: -25,
+          top: -10
+        }
+      },
+      video: { ref: "vb1d69S8nCk", provider: "youtube" },
+      isOpened: false,
+      isUnlocked: true
     },
     {
       dayNumber: 24,

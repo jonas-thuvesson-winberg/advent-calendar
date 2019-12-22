@@ -32,7 +32,8 @@ export class AudioService {
     cat: new LazyAudio("cat.wav"),
     train: new LazyAudio("train.wav"),
     wave: new LazyAudio("wave.wav"),
-    dogBark: new LazyAudio("dog_bark.wav")
+    dogBark: new LazyAudio("dog_bark.wav"),
+    horseNeigh: new LazyAudio("horse_neigh.wav")
   };
 
   playAudio(name: string): void {
