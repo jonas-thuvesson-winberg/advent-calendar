@@ -343,8 +343,20 @@ export const BOARD_DATA: BoardData = {
     {
       dayNumber: 22,
       audioFileName: "",
-      image: { fileName: "" },
-      video: { ref: "", provider: "youtube" },
+      image: {
+        fileName: "benny.png",
+        adjustment: {
+          left: -70,
+          top: -20
+        }
+      },
+      video: {
+        ref: "tXvZNugrO1A",
+        provider: "youtube",
+        offsets: {
+          start: 22
+        }
+      },
       isOpened: false
     },
     {
