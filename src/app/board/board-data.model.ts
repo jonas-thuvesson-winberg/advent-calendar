@@ -370,14 +370,16 @@ export const BOARD_DATA: BoardData = {
         }
       },
       video: { ref: "vb1d69S8nCk", provider: "youtube" },
-      isOpened: false,
-      isUnlocked: true
+      isOpened: false
     },
     {
       dayNumber: 24,
       audioFileName: "",
-      image: { fileName: "" },
-      video: { ref: "", provider: "youtube" },
+      image: {
+        fileName: "santa_car.png",
+        adjustment: { left: -50, top: -20 }
+      },
+      video: { ref: "Nult3KtauNc", provider: "youtube" },
       isOpened: false
     }
   ]
