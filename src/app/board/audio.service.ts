@@ -31,7 +31,8 @@ export class AudioService {
     cow: new LazyAudio("Cow-moo-sound.mp3"),
     cat: new LazyAudio("cat.wav"),
     train: new LazyAudio("train.wav"),
-    wave: new LazyAudio("wave.wav")
+    wave: new LazyAudio("wave.wav"),
+    dogBark: new LazyAudio("dog_bark.wav")
   };
 
   playAudio(name: string): void {

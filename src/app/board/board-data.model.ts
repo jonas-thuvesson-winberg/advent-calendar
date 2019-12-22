@@ -311,9 +311,15 @@ export const BOARD_DATA: BoardData = {
     },
     {
       dayNumber: 20,
-      audioFileName: "",
-      image: { fileName: "" },
-      video: { ref: "", provider: "youtube" },
+      audioFileName: "dogBark",
+      image: {
+        fileName: "dog.jpg",
+        adjustment: {
+          left: -100,
+          top: -20
+        }
+      },
+      video: { ref: "-l48NQnDPS8", provider: "youtube" },
       isOpened: false
     },
     {
