@@ -284,7 +284,6 @@ export const BOARD_DATA: BoardData = {
       audioFileName: "",
       image: {
         fileName: "xmas-tree.png",
-
         adjustment: {
           left: -33,
           height: 1.2
@@ -325,8 +324,20 @@ export const BOARD_DATA: BoardData = {
     {
       dayNumber: 21,
       audioFileName: "",
-      image: { fileName: "" },
-      video: { ref: "", provider: "youtube" },
+      image: {
+        fileName: "snow_scooter.jpg",
+        adjustment: {
+          left: -220,
+          height: 1.2
+        }
+      },
+      video: {
+        ref: "_3S5i2kicEE",
+        provider: "youtube",
+        offsets: {
+          start: 86
+        }
+      },
       isOpened: false
     },
     {
