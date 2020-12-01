@@ -1,11 +1,11 @@
 export interface DateData {
   dayNumber: number;
-  audioFileName: string;
+  audioFileName?: string;
   image: {
     fileName: string;
     adjustment?: { top?: number; left?: number; height?: number };
   };
-  video: {
+  video?: {
     offsets?: { start: number; end?: number };
     ref: string;
     provider: "youtube";

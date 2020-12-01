@@ -6,7 +6,7 @@ import { StateService } from "./state.service";
 @Component({
   selector: "ac-board",
   templateUrl: "./board.component.html",
-  styleUrls: ["./board.component.scss"]
+  styleUrls: ["./board.component.scss"],
 })
 export class BoardComponent implements OnInit {
   videoSelected: boolean;
@@ -20,7 +20,7 @@ export class BoardComponent implements OnInit {
     this.dates = BOARD_DATA.dates;
     const state = this.stateService.getState();
     if (state) {
-      this.dates = this.dates.map(date => {
+      this.dates = this.dates.map((date) => {
         date.isOpened = state[date.dayNumber];
         return date;
       });
@@ -29,7 +29,9 @@ export class BoardComponent implements OnInit {
 
   handleSelectedVideo(videoRef: string) {
     this.videoSelected = true;
-    this.selected = this.dates.find(item => item.video.ref === videoRef);
+    this.selected = this.dates.find(
+      (item) => item.video && item.video.ref && item.video.ref === videoRef
+    );
   }
 
   handleClosingModal() {

@@ -5,7 +5,7 @@ import {
   ElementRef,
   Renderer2,
   Output,
-  EventEmitter
+  EventEmitter,
 } from "@angular/core";
 import { AudioService } from "src/app/board/audio.service";
 import { DateData } from "../date-data.model";
@@ -14,7 +14,7 @@ import { StateService } from "../state.service";
 @Component({
   selector: "ac-door",
   templateUrl: "./door.component.html",
-  styleUrls: ["./door.component.scss"]
+  styleUrls: ["./door.component.scss"],
 })
 export class DoorComponent {
   @Input() date: DateData;
@@ -44,9 +44,7 @@ export class DoorComponent {
 
   private isDoorUnlocked(): boolean {
     if (this.date.isUnlocked) return true;
-    const hasValidValues =
-      !!this.date.image.fileName &&
-      (!!this.date.audioFileName || !!this.date.video.ref);
+    const hasValidValues = !!this.date.image.fileName;
     const today = new Date().getDate();
     return today >= this.date.dayNumber && hasValidValues;
   }
