@@ -1,6 +1,19 @@
+$background-color: rgba(2, 87, 8, 1);
+$background-color-hover: rgba(4, 142, 26, 1);
+
+@mixin left-door-color($main-color) {
+  background: rgb(3, 105, 10);
+  background: linear-gradient(270deg, rgba(3, 105, 10, 1) 0%, $main-color 3%);
+}
+
+@mixin right-door-color($main-color) {
+  background: rgb(1, 51, 4);
+  background: linear-gradient(270deg, rgba(1, 51, 4, 1) 0%, $main-color 3%);
+}
+
 .door-container {
   position: relative;
-  box-sizing: content-box;
+  box-sizing: border-box;
   display: block;
   // padding: 100px 100px;
   margin: 10px;
@@ -19,7 +32,13 @@
     @media (hover: hover) {
       &:hover {
         .cover {
-          background: rgba(4, 142, 26, 1);
+          &.left {
+            @include left-door-color($background-color-hover);
+          }
+
+          &.right {
+            @include right-door-color($background-color-hover);
+          }
         }
         cursor: pointer;
 
@@ -45,16 +64,16 @@
 
   .cover {
     z-index: 100;
-    box-sizing: content-box;
+    box-sizing: border-box;
     // height: 90%;
     position: absolute;
     top: 0px;
 
-    background: rgba(2, 87, 8, 1);
+    // background: rgba(2, 87, 8, 1);
     display: inline-block;
     margin: 0;
-    padding: 150px 0;
-    padding-right: 148px;
+    padding: 50% 0;
+    padding-right: 51%;
 
     &.open {
       width: 0;
@@ -63,14 +82,13 @@
     }
 
     &.left {
-      border-right: 2px rgb(3, 105, 10) solid;
-      left: 0px;
+      @include left-door-color($background-color);
+      left: -1%;
     }
 
     &.right {
-      border-right: 2px rgb(1, 51, 4) solid;
-
-      right: 0px;
+      @include right-door-color($background-color);
+      right: -1%;
       transform: rotate(180deg);
     }
   }
