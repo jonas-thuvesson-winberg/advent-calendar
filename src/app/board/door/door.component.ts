@@ -44,7 +44,7 @@ export class DoorComponent {
 
   private isDoorUnlocked(): boolean {
     if (this.date.isUnlocked) return true;
-    const hasValidValues = !!this.date.image.fileName;
+    const hasValidValues = !!this.date.image && !!this.date.image.fileName;
     const today = new Date().getDate();
     return today >= this.date.dayNumber && hasValidValues;
   }

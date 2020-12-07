@@ -16,14 +16,6 @@ const blank = (dayNr) => {
   return {
     dayNumber: dayNr,
     isOpened: false,
-    image: {
-      fileName: "blank.jpg",
-      adjustment: {
-        height: 1.2,
-        left: -110,
-        top: -60,
-      },
-    },
   };
 };
 
@@ -119,9 +111,42 @@ export const BOARD_DATA: BoardData = {
       image: duploBricks,
       isOpened: false,
     },
-    blank(11),
-    blank(12),
-    blank(13),
+    {
+      dayNumber: 11,
+      image: {
+        fileName: "lion-cliff.png",
+        adjustment: {
+          height: 1,
+          left: -40,
+          top: -20,
+        },
+      },
+      isOpened: false,
+    },
+    {
+      dayNumber: 12,
+      image: {
+        fileName: "lions.jpg",
+        adjustment: {
+          height: 1,
+          left: -150,
+          top: -30,
+        },
+      },
+      isOpened: false,
+    },
+    {
+      dayNumber: 13,
+      image: {
+        fileName: "surf-van2.jpg",
+        adjustment: {
+          height: 1,
+          left: -100,
+          top: -50,
+        },
+      },
+      isOpened: false,
+    },
     blank(14),
     blank(15),
     blank(16),

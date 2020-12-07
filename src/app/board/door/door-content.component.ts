@@ -7,7 +7,7 @@ import {
   ViewChild,
   ElementRef,
   Output,
-  EventEmitter
+  EventEmitter,
 } from "@angular/core";
 import { AudioService } from "src/app/board/audio.service";
 import { DateData } from "../date-data.model";
@@ -15,7 +15,7 @@ import { DateData } from "../date-data.model";
 @Component({
   selector: "ac-door-content",
   templateUrl: "./door-content.component.html",
-  styleUrls: ["./door-content.component.scss"]
+  styleUrls: ["./door-content.component.scss"],
 })
 export class DoorContentComponent implements OnInit, AfterViewInit {
   @Input() date: DateData;
@@ -31,7 +31,7 @@ export class DoorContentComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    if (this.date.image.fileName) {
+    if (this.date.image && this.date.image.fileName) {
       const img = new Image();
       img.src = `assets/${this.date.image.fileName}`;
       this.renderer.setAttribute(this.image.nativeElement, "src", `${img.src}`);

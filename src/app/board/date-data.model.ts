@@ -1,7 +1,7 @@
 export interface DateData {
   dayNumber: number;
   audioFileName?: string;
-  image: {
+  image?: {
     fileName: string;
     adjustment?: { top?: number; left?: number; height?: number };
   };
