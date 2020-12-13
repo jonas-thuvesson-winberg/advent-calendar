@@ -147,13 +147,60 @@ export const BOARD_DATA: BoardData = {
       },
       isOpened: false,
     },
-    blank(14),
-    blank(15),
-    blank(16),
-    blank(17),
-    blank(18),
-    blank(19),
-    blank(20),
+    {
+      dayNumber: 14,
+      image: {
+        fileName: "photo.jpg",
+        adjustment: {
+          height: 1,
+          left: -120,
+          top: -30,
+        },
+      },
+      isOpened: false,
+    },
+    {
+      dayNumber: 15,
+      image: duploBricks,
+      isOpened: false,
+    },
+    {
+      dayNumber: 16,
+      image: duploBricks,
+      isOpened: false,
+    },
+    {
+      dayNumber: 17,
+      image: duploBricks,
+      isOpened: false,
+    },
+    {
+      dayNumber: 18,
+      image: duploBricks,
+      isOpened: false,
+    },
+    {
+      dayNumber: 19,
+      image: {
+        fileName: "panda-den.png",
+        adjustment: {
+          height: 0.86,
+          left: -10,
+        },
+      },
+      isOpened: false,
+    },
+    {
+      dayNumber: 20,
+      image: {
+        fileName: "pandas.jpg",
+        adjustment: {
+          left: -50,
+          height: 0.88,
+        },
+      },
+      isOpened: false,
+    },
     blank(21),
     blank(22),
     blank(23),
