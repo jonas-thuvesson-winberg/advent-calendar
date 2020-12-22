@@ -201,9 +201,50 @@ export const BOARD_DATA: BoardData = {
       },
       isOpened: false,
     },
-    blank(21),
-    blank(22),
-    blank(23),
-    blank(24),
+    {
+      dayNumber: 21,
+      image: {
+        fileName: "whale.jpg",
+        adjustment: {
+          left: -90,
+          height: 0.88,
+        },
+      },
+      isOpened: false,
+    },
+    {
+      dayNumber: 22,
+      image: {
+        fileName: "toucan.jpg",
+        adjustment: {
+          height: 0.88,
+          left: -100,
+        },
+      },
+      isOpened: false,
+    },
+    {
+      dayNumber: 23,
+      image: {
+        fileName: "nemo.jpg",
+        adjustment: {
+          height: 0.9,
+          left: -20,
+        },
+      },
+      isOpened: false,
+    },
+    {
+      dayNumber: 24,
+      image: {
+        fileName: "penguin.jpg",
+        adjustment: {
+          height: 0.9,
+          left: -140,
+          top: -15,
+        },
+      },
+      isOpened: false,
+    },
   ],
 };
